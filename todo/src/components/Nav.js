@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { InputModal } from "./InputModal";
 import { ModalContext } from "../context/ModalContext";
 
@@ -14,7 +14,7 @@ export const Nav = () => {
 
     return (
         <div className="navbar">
-            <a className="logo" href="">ToDo</a>
+            <a className="logo" href="#">ToDo</a>
             <button type="button" className="add-todo" onClick={showModal}>
                 <span className="plus-icon">+</span> 
                 Add todo
