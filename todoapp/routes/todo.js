@@ -12,6 +12,6 @@ router.post("/createTodo", createTodo);
 router.get("/getTodos", getTodos)
 router.get("/getTodos/:id", getTodoById)
 router.post("/updateTodo", updateTodo);
-router.delete("/deleteTodo/:id", deleteTodo);
+router.post("/deleteTodo", deleteTodo);
 
 module.exports = router;

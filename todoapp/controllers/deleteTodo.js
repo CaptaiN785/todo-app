@@ -5,13 +5,12 @@ exports.deleteTodo = async(req, res) => {
 
     try{
         
-        const id = req.params.id;
-        const {title, description} = req.body;
+        const {id} = req.body;
 
         const todo = await Todo.findByIdAndDelete({_id: id})
         
         if(todo){
-            res.status(404).json({
+            res.status(200).json({
                 succes:true,
                 data:todo,
                 message:"Todo deleted with id: " + id
@@ -25,7 +24,7 @@ exports.deleteTodo = async(req, res) => {
         }
     }
     catch(err){
-        res.status(404).json({
+        res.status(500).json({
             succes:false,
             data:"",
             message:"Todo not found!"

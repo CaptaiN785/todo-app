@@ -27,10 +27,10 @@ exports.updateTodo = async(req, res) => {
         }
     }
     catch(err){
-        res.status(404).json({
+        res.status(500).json({
             succes:false,
             data:"",
-            message:"Todo not found!"
+            message:"Internal server error."
         })
     }
 
