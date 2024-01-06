@@ -1,17 +1,19 @@
 const express = require('express');
 require('dotenv').config({path: __dirname + '/.env' })
+const cors = require('cors')
 
 const PORT = process.env.PORT || 4000;
 
 // middleware to parse data
 const app = express()
 app.use(express.json())
+app.use(cors());
 
-let allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', "*");
-    res.header('Access-Control-Allow-Headers', "*");
-    next();
-}
+// let allowCrossDomain = function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', "*");
+//     res.header('Access-Control-Allow-Headers', "*");
+//     next();
+// }
 app.use(allowCrossDomain);
 
 // import routes for todo API
