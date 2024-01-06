@@ -14,7 +14,7 @@ app.use(cors());
 //     res.header('Access-Control-Allow-Headers', "*");
 //     next();
 // }
-app.use(allowCrossDomain);
+// app.use(allowCrossDomain);
 
 // import routes for todo API
 const todoRoutes = require("./routes/todo")
