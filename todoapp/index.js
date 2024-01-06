@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 4000;
 // middleware to parse data
 const app = express()
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 
 // let allowCrossDomain = function(req, res, next) {
 //     res.header('Access-Control-Allow-Origin', "*");
